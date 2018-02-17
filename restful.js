@@ -14,9 +14,8 @@ module.exports = {
 			}
 			try {
 				await next()
-			} catch (e) {
-				const error = e && e.error || {}
-				log.error('Process API ERROR:', error)
+			} catch (error) {
+				log.error('ERROR:', error)
 				ctx.status = 200
 				ctx.type = 'application/json'
 				ctx.body = {

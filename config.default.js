@@ -4,6 +4,9 @@ module.exports = {
 	"whiteListFlag": false,
 	// ip白名单列表
 	"whiteList": ['192.168.1.1'],
+
+	// tuling123 图灵机器人
+	"tulingKey": "< APIkey >",
 	
 	// 天气预报key: https://api.seniverse.com/v3/
 	"weather_uid": "xxx < 这里需要换成你的uid >",
