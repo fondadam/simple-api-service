@@ -16,14 +16,14 @@ const formatDate = (date = new Date()) => {
 }
 
 
-const get = (url, options = {}) => {
-	options = Object.assign({}, options, {method: "GET", url})
+const get = (uri, options = {}) => {
+	options = Object.assign({}, options, {method: "GET", uri})
 	
 	return request(options)
 }
 
-const post = (url, options = {}) => {
-	options = Object.assign({}, options, {method: "POST", url})
+const post = (uri, options = {}) => {
+	options = Object.assign({}, options, {method: "POST", uri})
 	
 	return request(options)
 }

@@ -5,11 +5,10 @@ const {tulingKey: key} = require('../config.js')
 // 配置url
 const URL = `http://www.tuling123.com/openapi/api`
 
-const postAndTulingReply = async (postData) => {
+const postAndTulingReply = async (postData = {}) => {
 	postData = Object.assign({}, postData, {key})
-
 	return new Promise((resolve) => {
-		post(URL, {qs: postData}).then(result => resolve(result))
+		post(URL, {json:true, body: postData}).then(result => resolve(result))
 	})
 }
 

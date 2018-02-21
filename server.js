@@ -1,5 +1,5 @@
 const Koa = require('koa')
-const bodyParser = require('koa-bodyparser')
+const formidable = require('koa2-formidable')
 const ip = require('ip')
 const router = require('koa-router')()
 
@@ -12,7 +12,7 @@ const app = new Koa()
 const restful = require('./restful')
 const config = require('./config')
 
-app.use(bodyParser())
+app.use(formidable())
 
 // ip 白名单
 app.use(async (ctx, next) => {
